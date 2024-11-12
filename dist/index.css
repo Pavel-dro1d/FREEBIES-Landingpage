@@ -47,11 +47,28 @@ html {
   margin: 0 auto;
 }
 
+.header .nav .list__item-link:hover, .mob-navigation .nav__list-item:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.mob-navigation__open-icon:hover, .mob-navigation__close-icon:hover {
+  cursor: pointer;
+  stroke: #000;
+}
+
+.header .nav .logo__link:hover, .header .nav .nav__sign-link:hover, .mob-navigation .nav__sign-link:hover {
+  cursor: pointer;
+  color: #F53838;
+}
+
 .header {
   width: 100%;
   height: 70px;
+  padding: 10px;
 }
 .header .nav {
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,12 +83,214 @@ html {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  column-gap: 0;
+  column-gap: 10px;
   row-gap: 0;
 }
 .header .nav .logo__icon {
   width: 35px;
   height: 37px;
+  fill: #F53838;
+}
+.header .nav .logo__link {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+}
+.header .nav .logo__link span {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .header .nav .logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+.header .nav .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 40px;
+  row-gap: 0;
+}
+.header .nav .list__item-link {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #4F5665;
+}
+@media (max-width: 992px) {
+  .header .nav .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header .nav .list {
+    display: none;
+  }
+}
+.header .nav .nav__sign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 30px;
+  row-gap: 0;
+}
+.header .nav .nav__sign-link {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+}
+.header .nav .nav__sign-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 23px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #F53838;
+  border: 2px solid #F53838;
+}
+.header .nav .nav__sign-button:hover {
+  background-color: #F53838;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .header .nav .nav__sign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 0;
+  }
+  .header .nav .nav__sign-button {
+    width: 120px;
+    height: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .header .nav .nav__sign {
+    display: none;
+  }
+}
+
+.mob-navigation {
+  display: none;
+}
+.mob-navigation__open {
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  right: 25px;
+}
+.mob-navigation__open-icon {
+  width: 33px;
+  height: 22px;
+  stroke: #F53838;
+}
+.mob-navigation__toggler {
+  display: none;
+}
+.mob-navigation__toggler:checked + .nav {
+  translate: 0;
+}
+.mob-navigation .nav {
+  padding: 60px 0 0 20px;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  translate: 100% 0;
+  transition: translate 0.22s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.mob-navigation .nav__sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 30px;
+  row-gap: 0;
+  padding: 50px 0 100px 0;
+}
+.mob-navigation .nav__sign-link {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #000;
+}
+.mob-navigation .nav__sign-button {
+  width: 150px;
+  height: 45px;
+  border-radius: 23px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #F53838;
+  border: 2px solid #F53838;
+}
+.mob-navigation .nav__sign-button:hover {
+  background-color: #F53838;
+  color: #fff;
+}
+.mob-navigation .nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 20px;
+}
+.mob-navigation .nav__list-item {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: #4F5665;
+}
+.mob-navigation__close {
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  right: 25px;
+}
+.mob-navigation__close-icon {
+  width: 25px;
+  height: 22px;
+  stroke: #F53838;
+}
+@media (max-width: 768px) {
+  .mob-navigation {
+    display: block;
+  }
+}
+
+body {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */

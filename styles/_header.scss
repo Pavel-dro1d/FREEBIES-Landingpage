@@ -8,18 +8,170 @@
 .header {
     width: 100%;
     height: 70px;
+    padding: 10px;
 
     .nav {
-        // height: 70px;
+        height: 70px;
         @include m.d-flex (space-between, center, nowrap, row, 0, 0);
 
         .logo {
-            @include m.d-flex (start, center, nowrap, row, 0, 0);
+            @include m.d-flex (start, center, nowrap, row, 10px, 0);
 
             &__icon {
                 width: 35px;
                 height: 37px;
+                fill: v.$color_red;
+            }
+
+            &__link {
+                @include m.font(20px, 500, v.$color_black);
+                @extend %hover-red;
+
+                span {
+                    @include m.font(20px, 700, v.$color_black);
+                }
+            }
+
+            @media(max-width:v.$media_lg) {
+
+                @include m.d-flex (start, center, nowrap, column, 0, 0);
             }
         }
+
+        .list {
+            @include m.d-flex (space-between, center, nowrap, row, 40px, 0);
+
+            &__item-link {
+                @include m.font(16px, 400, v.$color_grey);
+                @extend %hover-black;
+            }
+
+            @media(max-width:v.$media_lg) {
+                @include m.d-flex (space-between, center, nowrap, row, 20px, 0);
+            }
+
+            @media(max-width:v.$media_md) {
+                display: none;
+            }
+        }
+
+        .nav__sign {
+            @include m.d-flex (space-between, center, nowrap, row, 30px, 0);
+
+            &-link {
+                @include m.font(16px, 500, v.$color_black);
+                @extend %hover-red;
+            }
+
+            &-button {
+                width: 150px;
+                height: 45px;
+                border-radius: 23px;
+                background-color: v.$color_white;
+                @include m.font(16px, 500, v.$color_red);
+                border: 2px solid v.$color_red;
+                &:hover {
+                    background-color: v.$color_red;
+                    color: v.$color_white;
+                }
+            }
+
+            @media(max-width:v.$media_lg) {
+                @include m.d-flex (space-between, center, nowrap, row, 20px, 0);
+
+                &-button {
+                    width: 120px;
+                    height: 35px;
+                }
+
+
+            }
+            @media(max-width:v.$media_md) {
+                display: none;
+            }
+        }
+    }
+}
+
+.mob-navigation {
+    display: none;
+
+    &__open {
+        @include m.position(absolute, 10, -1, top, right, 25px, 25px);
+
+        &-icon {
+            width: 33px;
+            height: 22px;
+            stroke: v.$color_red;
+            @extend %hover-black-icon;
+        }
+    }
+
+    &__toggler {
+        display: none;
+        &:checked + .nav{
+            translate: 0;
+        }
+
+        
+    }
+
+    .nav {
+        padding: 60px 0 0 20px;
+        @include m.position(fixed, 999, 0);
+        translate: 100% 0;
+        transition: translate 0.22s;
+        // background-color: color.adjust(v.$color_black, $alpha: -0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        // @include m.d-flex (start, start, nowrap, column, 0, 110px);
+
+        &__sign {
+            @include m.d-flex (center, center, nowrap, row, 30px, 0);
+            padding: 50px 0 100px 0;
+
+            &-link {
+                @include m.font(16px, 500, v.$color_black);
+                @extend %hover-red;
+            }
+
+            &-button {
+                width: 150px;
+                height: 45px;
+                border-radius: 23px;
+                background-color: v.$color_white;
+                @include m.font(16px, 500, v.$color_red);
+                border: 2px solid v.$color_red;
+
+                &:hover {
+                    background-color: v.$color_red;
+                    color: v.$color_white;
+                }
+            }
+        }
+
+        &__list {
+            @include m.d-flex (center, start, nowrap, column, 0, 20px);
+
+            &-item {
+                @include m.font(20px, 400, v.$color_grey);
+                @extend %hover-black;
+            }
+        }
+    }
+
+    &__close {
+        @include m.position(absolute, 10, -1, top, right, 25px, 25px);
+
+        &-icon {
+            width: 25px;
+            height: 22px;
+            stroke: v.$color_red;
+            @extend %hover-black-icon;
+        }
+    }
+
+    @media(max-width:v.$media_md) {
+        display:block;
     }
 }

@@ -20,3 +20,10 @@
         stroke: v.$color_black;
     }
 }
+
+%hover-red {
+    &:hover {
+        cursor: pointer;
+        color: v.$color_red;
+    }
+}
