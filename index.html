@@ -13,83 +13,98 @@
     <link rel="stylesheet" href="dist/index.css" />
     <title>Freebies</title>
   </head>
+  <header class="header" aria-label="navigation menu">
+      <div class="container">
+          <nav class="header_navigation nav">
+              <div class="nav__logo-wrapper logo">
+                  <svg class="logo__icon" aria-label="header link">
+                      <use href="assets/sprites.svg#logo-icon"></use>
+                  </svg>
+                  <a class="logo__link">Lasles<span>VPN</span></a>
+              </div>
+
+              <div class="nav__links-wrapper">
+                  <ul class="nav__links-wrapper-list list" aria-label="header navigation links">
+                      <li class="list__item" >
+                          <a href="#" class="list__item-link">About</a>
+                      </li>
+                      <li class="list__item">
+                          <a href="#" class="list__item-link">Features</a>
+                      </li>
+                      <li class="list__item">
+                          <a href="#" class="list__item-link">Pricing</a>
+                      </li>
+                      <li class="list__item">
+                          <a href="#" class="list__item-link">Testimonials</a>
+                      </li>
+                      <li class="list__item">
+                          <a href="#" class="list__item-link">Help</a>
+                      </li>
+                  </ul>
+              </div>
+
+              <div class="nav__sign">
+                  <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
+                  <button class="nav__sign-button">Sign Up</button>
+              </div>
+          </nav>
+      </div>
+  </header>
+
+  <div class="mob-navigation">
+      <label for="checkboxID" class="mob-navigation__open">
+          <svg class="mob-navigation__open-icon">
+              <use href="assets/sprites.svg#burger-icon"></use>
+          </svg>
+      </label>
+
+      <input type="checkbox" id="checkboxID" class="mob-navigation__toggler">
+
+      <nav class="mob-navigation__menu nav">
+          <div class="nav__sign">
+              <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
+              <button class="nav__sign-button">Sign Up</button>
+          </div>
+          <ul class="nav__list">
+              <li class="nav__list-item" >
+                  <a href="#" class="nav__list-item-link">About</a>
+              </li>
+              <li class="nav__list-item">
+                  <a href="#" class="nav__list-item-link">Features</a>
+              </li>
+              <li class="nav__list-item">
+                  <a href="#" class="nav__list-item-link">Pricing</a>
+              </li>
+              <li class="nav__list-item">
+                  <a href="#" class="nav__list-item-link">Testimonials</a>
+              </li>
+              <li class="nav__list-item">
+                  <a href="#" class="nav__list-item-link">Help</a>
+              </li>
+          </ul>
+
+          <label for="checkboxID" class="mob-navigation__close">
+              <svg class="mob-navigation__close-icon">
+                  <use href="assets/sprites.svg#cross-icon"></use>
+              </svg>
+          </label>
+      </nav>
+  </div>
   <body>
-    <header class="header" aria-label="navigation menu">
+    <section class="hero-section" aria-label="hero section">
         <div class="container">
-            <nav class="header_navigation nav">
-                <div class="nav__logo-wrapper logo">
-                    <svg class="logo__icon" aria-label="header link">
-                        <use href="assets/sprites.svg#logo-icon"></use>
-                    </svg>
-                    <a class="logo__link">Lasles<span>VPN</span></a>
+            <div class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__content-title">Want anything to be easy with <span>LaslesVPN.</span></h1>
+                    <p class="hero__content-desc">Provide a network for all your needs with ease and fun using <span>LaslesVPN</span> discover interesting features from us.</p>
+                    <button class="hero__content-btn">Get Started</button>
+
                 </div>
-
-                <div class="nav__links-wrapper">
-                    <ul class="nav__links-wrapper-list list" aria-label="header navigation links">
-                        <li class="list__item" >
-                            <a href="#" class="list__item-link">About</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__item-link">Features</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__item-link">Pricing</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__item-link">Testimonials</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__item-link">Help</a>
-                        </li>
-                    </ul>
+                <div class="hero__img">
+                    <img src="assets/webp/hero.webp" alt="work img">
                 </div>
-
-                <div class="nav__sign">
-                    <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
-                    <button class="nav__sign-button">Sign Up</button>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="mob-navigation">
-        <label for="checkboxID" class="mob-navigation__open">
-            <svg class="mob-navigation__open-icon">
-                <use href="assets/sprites.svg#burger-icon"></use>
-            </svg>
-        </label>
-
-        <input type="checkbox" id="checkboxID" class="mob-navigation__toggler">
-
-        <nav class="mob-navigation__menu nav">
-            <div class="nav__sign">
-                <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
-                <button class="nav__sign-button">Sign Up</button>
             </div>
-            <ul class="nav__list">
-                <li class="nav__list-item" >
-                    <a href="#" class="nav__list-item-link">About</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="#" class="nav__list-item-link">Features</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="#" class="nav__list-item-link">Pricing</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="#" class="nav__list-item-link">Testimonials</a>
-                </li>
-                <li class="nav__list-item">
-                    <a href="#" class="nav__list-item-link">Help</a>
-                </li>
-            </ul>
-
-            <label for="checkboxID" class="mob-navigation__close">
-                <svg class="mob-navigation__close-icon">
-                    <use href="assets/sprites.svg#cross-icon"></use>
-                </svg>
-            </label>
-        </nav>
-    </div>
+        </div>
+    </section>
   </body>
 </html>
