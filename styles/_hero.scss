@@ -3,12 +3,14 @@
 @use "placeholders";
 
 .hero {
-    padding: 120px 0 50px 0;
+    padding: 120px 10px 50px 15px;
     @include m.d-flex (center, start, nowrap, row, 60px, 0);
+
     &__content {
         @include m.d-flex (start, start, nowrap, column, 0, 30px);
-        width: 540px;
-        height: 330px;
+        max-width: 540px;
+
+        // height: 330px;
         &-title {
             @include m.font(50px, 500, v.$color_black);
             line-height: 1.4;
@@ -35,15 +37,102 @@
             @include m.font(16px, 700, v.$color_white);
             border: none;
             box-shadow: 0px 36px 59px -19px rgba(245, 125, 125, 1);
-            
+
             &:hover {
                 border: 2px solid v.$color_black;
             }
         }
+
+        @media(max-width: v.$media_xl) {
+            @include m.d-flex (start, start, nowrap, column, 0, 30px);
+
+            &-title {
+                @include m.font(30px, 500, v.$color_black);
+                line-height: 1.2;
+
+                span {
+                    @include m.font(30px, 700, v.$color_black);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_lg) {
+            @include m.d-flex (start, start, nowrap, column, 0, 30px);
+
+            &-title {
+                @include m.font(25px, 500, v.$color_black);
+                line-height: 1.2;
+
+                span {
+                    @include m.font(30px, 700, v.$color_black);
+                }
+            }
+
+            &-desc {
+                @include m.font(14px, 400, v.$color_grey);
+                line-height: 1.87;
+
+                span {
+                    @include m.font(14px, 500, v.$color_grey);
+                }
+            }
+
+            &-btn {
+                width: 200px;
+                height: 50px;
+                border-radius: 10px;
+                @include m.font(16px, 700, v.$color_white);
+            }
+        }
+
+        @media(max-width: v.$media_xl) {
+            max-width: 480px;
+        }
+
+        @media(max-width: v.$media_md) {
+            &-desc { 
+                margin: 0 0 300px 0;
+            }
+        }
+
     }
 
     &__img {
+        background: url("../assets/webp/hero.webp") center/contain no-repeat;
         width: 610px;
         height: 380px;
     }
+
+    @media(max-width: v.$media_xl) {
+        @include m.d-flex (center, start, nowrap, row, 20px, 0);
+
+        &__img {
+            background: url("../assets/webp/hero_2.webp") top/contain no-repeat;
+        }
+    }
+
+    @media(max-width: v.$media_md) {
+        padding: 50px 10px 50px 15px;
+        @include m.d-flex (center, end, nowrap, row, 60px, 0);
+        background: url("../assets/webp/hero.webp") center 60%/415px no-repeat;
+
+        &__content {
+            @include m.d-flex (start, center, nowrap, column, 0, 30px);
+        }
+
+        &__img {
+            display: none;
+        }
+
+    }
+
+    @media(max-width: v.$media_min) {
+        background: url("../assets/webp/hero_3.webp") center 60%/300px no-repeat;
+
+        &__content-desc {
+            margin: 0 0 220px 0;
+        }
+    }
+
+
 }
