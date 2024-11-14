@@ -9,101 +9,152 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="assets/favicon.png" type="img/png"/>
+    <link rel="icon" href="assets/favicon.png" type="img/png" />
     <link rel="stylesheet" href="dist/index.css" />
     <title>Freebies</title>
   </head>
   <header class="header" aria-label="navigation menu">
-      <div class="container">
-          <nav class="header_navigation nav">
-              <div class="nav__logo-wrapper logo">
-                  <svg class="logo__icon" aria-label="header link">
-                      <use href="assets/sprites.svg#logo-icon"></use>
-                  </svg>
-                  <a class="logo__link">Lasles<span>VPN</span></a>
-              </div>
+    <div class="container">
+      <nav class="header_navigation nav">
+        <div class="nav__logo-wrapper logo">
+          <svg class="logo__icon" aria-label="header link">
+            <use href="assets/sprites.svg#logo-icon"></use>
+          </svg>
+          <a class="logo__link">Lasles<span>VPN</span></a>
+        </div>
 
-              <div class="nav__links-wrapper">
-                  <ul class="nav__links-wrapper-list list" aria-label="header navigation links">
-                      <li class="list__item" >
-                          <a href="#" class="list__item-link">About</a>
-                      </li>
-                      <li class="list__item">
-                          <a href="#" class="list__item-link">Features</a>
-                      </li>
-                      <li class="list__item">
-                          <a href="#" class="list__item-link">Pricing</a>
-                      </li>
-                      <li class="list__item">
-                          <a href="#" class="list__item-link">Testimonials</a>
-                      </li>
-                      <li class="list__item">
-                          <a href="#" class="list__item-link">Help</a>
-                      </li>
-                  </ul>
-              </div>
+        <div class="nav__links-wrapper">
+          <ul
+            class="nav__links-wrapper-list list"
+            aria-label="header navigation links"
+          >
+            <li class="list__item">
+              <a href="#" class="list__item-link">About</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__item-link">Features</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__item-link">Pricing</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__item-link">Testimonials</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__item-link">Help</a>
+            </li>
+          </ul>
+        </div>
 
-              <div class="nav__sign">
-                  <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
-                  <button class="nav__sign-button">Sign Up</button>
-              </div>
-          </nav>
-      </div>
+        <div class="nav__sign">
+          <a href="#" class="nav__sign-link" aria-label="sign in link"
+            >Sign In</a
+          >
+          <button class="nav__sign-button">Sign Up</button>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <div class="mob-navigation">
-      <label for="checkboxID" class="mob-navigation__open">
-          <svg class="mob-navigation__open-icon">
-              <use href="assets/sprites.svg#burger-icon"></use>
-          </svg>
+    <label for="checkboxID" class="mob-navigation__open">
+      <svg class="mob-navigation__open-icon">
+        <use href="assets/sprites.svg#burger-icon"></use>
+      </svg>
+    </label>
+
+    <input type="checkbox" id="checkboxID" class="mob-navigation__toggler" />
+
+    <nav class="mob-navigation__menu nav">
+      <div class="nav__sign">
+        <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
+        <button class="nav__sign-button">Sign Up</button>
+      </div>
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-item-link">About</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-item-link">Features</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-item-link">Pricing</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-item-link">Testimonials</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-item-link">Help</a>
+        </li>
+      </ul>
+
+      <label for="checkboxID" class="mob-navigation__close">
+        <svg class="mob-navigation__close-icon">
+          <use href="assets/sprites.svg#cross-icon"></use>
+        </svg>
       </label>
-
-      <input type="checkbox" id="checkboxID" class="mob-navigation__toggler">
-
-      <nav class="mob-navigation__menu nav">
-          <div class="nav__sign">
-              <a href="#" class="nav__sign-link" aria-label="sign in link">Sign In</a>
-              <button class="nav__sign-button">Sign Up</button>
-          </div>
-          <ul class="nav__list">
-              <li class="nav__list-item" >
-                  <a href="#" class="nav__list-item-link">About</a>
-              </li>
-              <li class="nav__list-item">
-                  <a href="#" class="nav__list-item-link">Features</a>
-              </li>
-              <li class="nav__list-item">
-                  <a href="#" class="nav__list-item-link">Pricing</a>
-              </li>
-              <li class="nav__list-item">
-                  <a href="#" class="nav__list-item-link">Testimonials</a>
-              </li>
-              <li class="nav__list-item">
-                  <a href="#" class="nav__list-item-link">Help</a>
-              </li>
-          </ul>
-
-          <label for="checkboxID" class="mob-navigation__close">
-              <svg class="mob-navigation__close-icon">
-                  <use href="assets/sprites.svg#cross-icon"></use>
-              </svg>
-          </label>
-      </nav>
+    </nav>
   </div>
   <body>
     <section class="hero-section" aria-label="hero section">
-        <div class="container">
-            <div class="hero">
-                <div class="hero__content">
-                    <h1 class="hero__content-title">Want anything to be easy with <span>LaslesVPN.</span></h1>
-                    <p class="hero__content-desc">Provide a network for all your needs with ease and fun using <span>LaslesVPN</span> discover interesting features from us.</p>
-                    <button class="hero__content-btn">Get Started</button>
+      <div class="container">
+        <div class="hero">
+          <div class="hero__content">
+            <h1 class="hero__content-title">
+              Want anything to be easy with <span>LaslesVPN.</span>
+            </h1>
+            <p class="hero__content-desc">
+              Provide a network for all your needs with ease and fun using
+              <span>LaslesVPN</span> discover interesting features from us.
+            </p>
+            <button class="hero__content-btn">Get Started</button>
+          </div>
+          <div class="hero__img"></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="statistic-section" aria-label="statistic section">
+      <div class="container">
+        <div class="statistic">
+            <div class="statistic__user">
+                <div class="statistic__user-left statistic-left">
+                    <svg class="statistic__user-left-icon">
+                        <use href="assets/sprites.svg#user-icon"></use>
+                    </svg>
                 </div>
-                <div class="hero__img">
+                <div class="statistic__user-right statisticright">
+                    <h2 class="statistic__user-right-title statistic-title">90+</h2>
+                    <p class="statistic__user-right-desc statistic-desc">Users</p>
                 </div>
             </div>
+
+                <div class="statistic__location">
+                    <div class="statistic__location-left statistic-left">
+                        <svg class="statistic__location-left-icon">
+                            <use href="assets/sprites.svg#location-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="statistic__location-right statistic-right">
+                        <h2 class="statistic__location-right-title statistic-title">30+</h2>
+                        <p class="statistic__location-right-desc statistic-desc">Locations</p>
+                    </div>
+                </div>
+
+                    <div class="statistic__server">
+                        <div class="statistic__server-left statistic-left">  
+                            <svg class="statistic__server-left-icon">
+                                <use href="assets/sprites.svg#server-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="statistic__server-right statistic-right">
+                            <h2 class="statistic__server-right-title statistic-title">50+</h2>
+                            <p class="statistic__server-right-desc statistic-desc">Servers</p>
+                        </div>
+                        
+                    </div>
         </div>
+      </div>
     </section>
   </body>
 </html>

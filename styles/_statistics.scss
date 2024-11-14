@@ -1,0 +1,109 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+.statistic {
+    padding: 50px 0 0 0;
+    height: 205px;
+    max-width: 100%;
+    @include m.d-flex (space-between, start, nowrap, row, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 18px 39px -45px rgba(133, 134, 140, 1);
+
+    &__user {
+        height: 130px;
+        width: 33%;
+        @include m.d-flex (center, center, nowrap, row, 36px, 0);
+        border-right: 2px solid v.$color_light_grey;
+
+        &-left {
+            width: 55px;
+            height: 55px;
+            background-color: v.$color_light_red;
+            border-radius: 28px;
+            @include m.d-flex (center, center, nowrap, row, 0, 0);
+            &-icon {
+                fill: v.$color_red;
+                width: 17px;
+                height: 19px;
+            }
+        }
+
+        &-right {
+            &-title {
+                @include m.font(25px, 700, v.$color_black);
+                line-height: 1.2;
+            }
+
+            &-desc {
+                @include m.font(20px, 400, v.$color_grey);
+                line-height: 1.5;
+            }
+        }
+
+        
+    }
+
+    &__location {
+        height: 130px;
+        width: 33%;
+        @include m.d-flex (center, center, nowrap, row, 36px, 0);
+
+        &-left {
+            width: 55px;
+            height: 55px;
+            background-color: v.$color_light_red;
+            border-radius: 28px;
+            @include m.d-flex (center, center, nowrap, row, 0, 0);
+            &-icon {
+                fill: v.$color_red;
+                width: 21px;
+                height: 19px;
+            }
+        }
+
+        &-right {
+            &-title {
+                @include m.font(25px, 700, v.$color_black);
+                line-height: 1.2;
+            }
+
+            &-desc {
+                @include m.font(20px, 400, v.$color_grey);
+                line-height: 1.5;
+            }
+        }
+    }
+
+    &__server {
+        height: 130px;
+        width: 33%;
+        @include m.d-flex (center, center, nowrap, row, 36px, 0);
+        border-left: 2px solid v.$color_light_grey;
+
+        &-left {
+            width: 55px;
+            height: 55px;
+            background-color: v.$color_light_red;
+            border-radius: 28px;
+            @include m.d-flex (center, center, nowrap, row, 0, 0);
+            &-icon {
+                fill: v.$color_red;
+                width: 14px;
+                height: 21px;
+            }
+        }
+
+        &-right {
+            &-title {
+                @include m.font(25px, 700, v.$color_black);
+                line-height: 1.2;
+            }
+
+            &-desc {
+                @include m.font(20px, 400, v.$color_grey);
+                line-height: 1.5;
+            }
+        }
+    }
+}
