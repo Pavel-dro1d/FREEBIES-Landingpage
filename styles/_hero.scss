@@ -3,7 +3,7 @@
 @use "placeholders";
 
 .hero {
-    padding: 120px 10px 50px 15px;
+    padding: 120px 10px 0px 15px;
     @include m.d-flex (center, start, nowrap, row, 60px, 0);
 
     &__content {
@@ -126,13 +126,14 @@
 
     }
 
-    @media(max-width: v.$media_min) {
-        background: url("../assets/webp/hero_3.webp") center 60%/300px no-repeat;
+    // @media(max-width: v.$media_min) {
+    //     background: url("../assets/webp/hero_3.webp") center 40%/300px no-repeat;
 
-        &__content-desc {
-            margin: 0 0 220px 0;
-        }
-    }
-
-
+    //     &__content-desc {
+    //         margin: 0 0 220px 0;
+    //     }
+    // }
+    @media(max-width: v.$media_md) {
+        padding: 40px 10px 0px 15px;
+    } 
 }

@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+.features {
+  padding: 95px 0 0 0;
+  @include m.d-flex(center, center, nowrap, row, 170px, 0);
+
+  &__bg {
+    width: 510px;
+    height: 415px;
+    background: url("../assets/webp/about.webp") center/contain no-repeat;
+  }
+
+  &__points {
+    @include m.d-flex(center, start, nowrap, column, 0, 20px);
+    width: 31%;
+
+    &-title {
+      @include m.font(35px, 500, v.$color_black);
+      line-height: 1.4;
+    }
+
+    &-desc {
+      @include m.font(16px, 400, v.$color_grey);
+      line-height: 1.8;
+    }
+
+    &-list {
+      &-item {
+        @include m.font(14px, 400, v.$color_grey);
+
+        margin-bottom: 1rem;
+    background: url(../assets/check.svg) no-repeat left top;
+    padding: 4px 0 3px 32px;
+      }
+    }
+  }
+}
+
