@@ -10,6 +10,27 @@
     width: 510px;
     height: 415px;
     background: url("../assets/webp/about.webp") center/contain no-repeat;
+
+    @media(max-width: v.$media_xl) {
+      width: 400px;
+      background: url("../assets/webp/about.webp") 0 15%/400px no-repeat;
+    }
+
+    @media(max-width: v.$media_md) {
+      width: 300px;
+      background: url("../assets/webp/about.webp") 0 15%/300px no-repeat;
+    }
+
+    @media(max-width: v.$media_sm) {
+      width: 250px;
+      background: url("../assets/webp/about_2.webp") -60px 15%/300px no-repeat;
+    }
+
+    @media(max-width: v.$media_min) {
+      width: 100%;
+      height: 300px;
+      background: url("../assets/webp/about.webp") center/contain no-repeat;
+    }
   }
 
   &__points {
@@ -35,6 +56,52 @@
     padding: 4px 0 3px 32px;
       }
     }
+
+    @media(max-width: v.$media_xl) {
+      &-title {
+        @include m.font(22px, 500, v.$color_black);
+        line-height: 1.2;
+      }
+    }
+
+    @media(max-width: v.$media_lg) {
+      &-desc {
+        @include m.font(14px, 400, v.$color_grey);
+        line-height: 1.4;
+      }
+  
+      &-list {
+        &-item {
+          @include m.font(14px, 400, v.$color_grey);
+        }
+      }
+    }
+
+    @media(max-width: v.$media_sm) {
+      @include m.d-flex(center, start, nowrap, column, 0, 10px);
+    width: 45%;
+    }
+
+    @media(max-width: v.$media_min) {
+      padding: 0 10px;
+      width: 100%;
+    }
+  }
+
+  @media(max-width: v.$media_xl) {
+    @include m.d-flex(center, center, nowrap, row, 50px, 0);
+  }
+
+  @media(max-width: v.$media_lg) {
+    padding: 40px 10px 0 0;
+  }
+
+  @media(max-width: v.$media_sm) {
+    @include m.d-flex(center, center, nowrap, row, 0, 0);
+  }
+
+  @media(max-width: v.$media_min) {
+    @include m.d-flex(center, center, nowrap, column-reverse, 0, 0);
   }
 }
 

@@ -1,0 +1,151 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+
+.plan-card {
+    width: 330px;
+    height: 760px;
+    padding: 80px 0 50px 0;
+    border: 3px solid v.$color_light_grey;
+    border-radius: 10px;
+    @include m.d-flex(start, center, nowrap, column, 0, 30px);
+
+    &__icon {
+        width: 145px;
+        height: 165px;
+
+        @media(max-width: v.$media_lg) {
+            width: 120px;
+            height: 130px;
+        }
+
+        @media(max-width: v.$media_lg) {
+            align-self: center;
+        }
+
+        @media(max-width: v.$media_sm) {
+            width: 80px;
+            height: 91px;
+        }
+    }
+
+    &__title {
+        @include m.font(18px, 500, v.$color_black);
+        line-height: 1.6;
+        text-align: center;
+
+        @media(max-width: v.$media_lg) {
+            align-self: center;
+        }
+
+        @media(max-width: v.$media_sm) {
+            @include m.font(14px, 500, v.$color_black);
+        }
+    }
+
+    &__list {
+        &-item {
+            @include m.font(14px, 400, v.$color_grey);
+
+            margin-bottom: 1rem;
+            background: url(../assets/mark_check.svg) no-repeat left top;
+            padding: 4px 0 3px 32px;
+
+            @media(max-width: v.$media_lg) {
+                @include m.font(14px, 400, v.$color_grey);
+                margin-bottom: 0.5rem;
+                background: url(../assets/mark_check.svg) no-repeat left top;
+                padding: 4px 0 3px 25px;
+            }
+
+            @media(max-width: v.$media_md) {
+                @include m.font(12px, 400, v.$color_grey);
+            }
+
+            @media(max-width: v.$media_sm) {
+                @include m.font(12px, 400, v.$color_grey);
+            }
+            
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        height: 100%;
+        @include m.d-flex(end, center, nowrap, column, 0, 20px);
+
+        &-coast {
+            @include m.font(25px, 500, v.$color_black);
+            line-height: 1.2;
+
+            span {
+                @include m.font(25px, 500, v.$color_grey);
+                line-height: 1.2;
+            }
+            
+            @media(max-width: v.$media_sm) {
+                @include m.font(16px, 500, v.$color_black);
+
+            span {
+                @include m.font(16px, 500, v.$color_grey);
+            }
+            }
+        }
+
+        &-button {
+            width: 178px;
+            height: 45px;
+            border-radius: 23px;
+            background-color: v.$color_grey_white;
+            @include m.font(16px, 700, v.$color_red);
+            border: 2px solid v.$color_red;
+
+            &:hover {
+                background-color: v.$color_red;
+                color: v.$color_white;
+                box-shadow: 0px 10px 44px 1px rgba(245, 125, 125, 1);
+            }
+
+            @media(max-width: v.$media_lg) {
+            width: 120px;
+            height: 35px;
+            }
+
+            @media(max-width: v.$media_sm) {
+            width: 80px;
+            height: 25px;
+            @include m.font(14px, 700, v.$color_red);
+            }
+        }
+
+    }
+
+    @media(max-width: v.$media_xl) {
+        width: 260px;
+    }
+
+    @media(max-width: v.$media_lg) {
+        padding: 40px 0 20px 0;
+        width: 220px;
+        height: 650px;
+    }
+
+    @media(max-width: v.$media_md) {
+        height: 545px;
+        width: 165px;
+        padding: 40px 10px 20px 10px;
+        @include m.d-flex(start, start, nowrap, column, 0, 10px);
+    }
+
+    @media(max-width: v.$media_sm) {
+        height: 535px;
+        width: 120px;
+        padding: 40px 10px 20px 10px;
+        @include m.d-flex(start, start, nowrap, column, 0, 10px);
+    }
+
+
+
+
+}
