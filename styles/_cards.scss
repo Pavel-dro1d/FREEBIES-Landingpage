@@ -40,7 +40,7 @@
         }
 
         @media(max-width: v.$media_sm) {
-            @include m.font(14px, 500, v.$color_black);
+            @include m.font(13px, 500, v.$color_black);
         }
     }
 

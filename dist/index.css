@@ -1076,7 +1076,7 @@ html {
 }
 @media (max-width: 576px) {
   .plan-card__title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     font-style: normal;
     color: #000;
