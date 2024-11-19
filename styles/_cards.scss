@@ -11,6 +11,10 @@
     border-radius: 10px;
     @include m.d-flex(start, center, nowrap, column, 0, 30px);
 
+    &:hover {
+        border: 3px solid v.$color_red;
+    }
+
     &__icon {
         width: 145px;
         height: 165px;

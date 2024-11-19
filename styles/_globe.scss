@@ -1,0 +1,148 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+.globe-section {
+    background-color: v.$color_grey_white;
+}
+
+.globe {
+    @include m.d-flex(start, center, nowrap, column, 0, 20px);
+    padding: 0 10px 0 10px;
+
+    &__header {
+        width: 505px;
+        padding: 0 0 70px 0;
+        text-align: center;
+        @include m.d-flex(start, center, nowrap, column, 0, 20px);
+
+        &-title {
+            @include m.font(35px, 500, v.$color_black);
+            line-height: 1.4;
+            text-wrap: pretty;
+        }
+
+        &-desc {
+            @include m.font(16px, 400, v.$color_grey);
+            line-height: 1.8;
+            text-align: center;
+            text-wrap: stable;
+
+            span {
+                @include m.font(16px, 500, v.$color_grey);
+            }
+        }
+
+        @media(max-width: v.$media_xl) {
+            &-title {
+                @include m.font(22px, 500, v.$color_black);
+            }
+        }
+
+        @media(max-width: v.$media_lg) {
+            padding: 0 0 40px 0;
+        }
+
+        @media(max-width: v.$media_md) {
+            &-desc {
+                @include m.font(14px, 400, v.$color_grey);
+
+                span {
+                    @include m.font(14px, 500, v.$color_grey);
+                }
+            }
+    
+        }
+
+        @media(max-width: v.$media_sm) {
+            width: 350px;
+            padding: 0;
+        }
+    }
+
+    &__icon {
+        width: 1060px;
+        height: 538px;
+    }
+
+    &__products {
+        padding: 75px 0 110px 0;
+        @include m.d-flex(space-between, center, nowrap, row, 60px, 0);
+
+        &-icon {
+            width: 125px;
+            height: 74px;
+        }
+
+        @media(max-width: v.$media_xl) {
+            &-icon {
+                width: 125px;
+                height: 48px;
+            }
+        }
+
+        @media(max-width: v.$media_lg) {
+            padding: 60px 0 30px 0;
+            @include m.d-flex(space-between, center, nowrap, row, 30px, 0);
+            &-icon {
+                width: 125px;
+                height: 48px;
+            }
+        }
+
+        @media(max-width: v.$media_md) {
+            padding: 30px 0 30px 0;
+            @include m.d-flex(space-between, center, nowrap, row, 30px, 0);
+            &-icon {
+                width: 75px;
+                height: 48px;
+            }
+        }
+
+        @media(max-width: v.$media_sm) {
+            padding: 0 0 30px 0;
+            @include m.d-flex(space-between, center, nowrap, row, 15px, 0);
+            &-icon {
+                width: 65px;
+                height: 48px;
+            }
+        }
+    }
+
+    @media(max-width: v.$media_xl) {
+        &__icon {
+            width: 776px;
+        height: 394px;
+        }
+    }
+
+    @media(max-width: v.$media_lg) {
+        &__icon {
+            width: 678px;
+        height: 344px;
+        }
+    }
+
+    @media(max-width: v.$media_md) {
+        &__icon {
+            width: 478px;
+        height: 242px;
+        }
+    }
+
+    @media(max-width: v.$media_sm) {
+        
+        &__icon {
+            width: 374px;
+        height: 203px;
+        }
+    }
+
+    @media(max-width: v.$media_min) {
+        
+        &__icon {
+            width: 374px;
+        height: 203px;
+        }
+    }
+}
