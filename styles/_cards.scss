@@ -70,7 +70,7 @@
             @media(max-width: v.$media_sm) {
                 @include m.font(12px, 400, v.$color_grey);
             }
-            
+
         }
     }
 
@@ -87,13 +87,13 @@
                 @include m.font(25px, 500, v.$color_grey);
                 line-height: 1.2;
             }
-            
+
             @media(max-width: v.$media_sm) {
                 @include m.font(16px, 500, v.$color_black);
 
-            span {
-                @include m.font(16px, 500, v.$color_grey);
-            }
+                span {
+                    @include m.font(16px, 500, v.$color_grey);
+                }
             }
         }
 
@@ -112,14 +112,14 @@
             }
 
             @media(max-width: v.$media_lg) {
-            width: 120px;
-            height: 35px;
+                width: 120px;
+                height: 35px;
             }
 
             @media(max-width: v.$media_sm) {
-            width: 80px;
-            height: 25px;
-            @include m.font(14px, 700, v.$color_red);
+                width: 80px;
+                height: 25px;
+                @include m.font(14px, 700, v.$color_red);
             }
         }
 
@@ -148,8 +148,68 @@
         padding: 40px 10px 20px 10px;
         @include m.d-flex(start, start, nowrap, column, 0, 10px);
     }
+}
+
+.slider-card {
+    width: 400px;
+    height: 230px;
+    padding: 30px 30px 30px 30px;
+    border: 2px solid v.$color_border_grey;
+    border-radius: 10px;
+    position: relative;
 
 
 
+    &:hover {
+        border: 2px solid v.$color_red;
+    }
 
+    @include m.d-flex(start, center, nowrap, column, 0, 10px);
+
+    &__header {
+        width: 100%;
+        @include m.d-flex(start, center, nowrap, row, 20px, 0);
+        align-self: flex-start;
+        position: relative;
+
+        &::before {
+            content: "4.5";
+            position: absolute;
+            top: 15px;
+            right: 25px;
+        }
+
+        &::after {
+            content: "" url(../assets/star.svg)"";
+            position: absolute;
+            top: 15px;
+            right: 0;
+        }
+
+        &-desc {
+            &-name {
+                @include m.font(18px, 500, v.$color_black);
+                line-height: 1.6;
+            }
+
+            &-location {
+                @include m.font(14px, 400, v.$color_dark_grey);
+                line-height: 1.1;
+            }
+        }
+    }
+
+    &__testimonial {
+        @include m.font(16px, 400, v.$color_black);
+        line-height: 1.87;
+
+        @media(max-width: v.$media_lg) {
+            @include m.font(14px, 400, v.$color_black);
+        }
+    }
+
+    @media(max-width: v.$media_min) {
+        width: 345px;
+        height: 215px;
+    }
 }

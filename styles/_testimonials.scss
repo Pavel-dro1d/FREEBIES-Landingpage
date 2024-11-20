@@ -1,0 +1,112 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+
+.testimonials-section {
+    background-color: v.$color_grey_white;
+}
+
+.testimonials {
+    padding: 10px 0 0 0;
+    @include m.d-flex(start, center, nowrap, column, 0, 0);
+
+    &__header {
+        width: 515px;
+        @include m.d-flex(start, center, nowrap, column, 0, 20px);
+
+        &-title {
+            @include m.font(35px, 500, v.$color_black);
+            text-align: center;
+            line-height: 1.4;
+
+            @media(max-width: v.$media_xl) {
+                @include m.font(22px, 500, v.$color_black);
+            }
+        }
+
+        &-desc {
+            @include m.font(16px, 400, v.$color_grey);
+            text-align: center;
+            line-height: 1.8;
+
+            @media(max-width: v.$media_lg) {
+                @include m.font(14px, 500, v.$color_grey);
+            }
+        }
+
+        @media(max-width: v.$media_md) {
+            width: 300px;
+        }
+    }
+
+    &__slider {
+        padding: 60px 0 60px 0;
+        @include m.d-flex(center, start, nowrap, row, 30px, 0);
+
+        @media(max-width: v.$media_xxl) {
+            @include m.d-flex(center, start, wrap, row, 30px, 20px);
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        @include m.d-flex(space-between, center, nowrap, row, 0, 0);
+        padding: 0 20px 65px;
+        &-points {
+            @include m.d-flex(center, start, nowrap, row, 15px, 0);
+
+            &-red {
+                width: 35px;
+                height: 15px;
+                border-radius: 8px;
+                background-color: v.$color_red;
+            }
+
+            &-circle {
+                width: 15px;
+                height: 15px;
+                border-radius: 8px;
+                background-color: v.$color_border_grey;
+            }
+        }
+
+        &-switch {
+            @include m.d-flex(center, start, nowrap, row, 20px, 0);
+            &-button {
+                width: 60px;
+                height: 60px;
+                border: 2px solid v.$color_red;
+                border-radius: 30px;
+                @include m.d-flex(center, center, nowrap, row, 0, 0);
+                &:hover {
+                    background-color: v.$color_red;
+
+                    .testimonials__footer-switch-button-left,
+                    .testimonials__footer-switch-button-right {
+                        fill: v.$color_white;
+                    }
+                }
+
+
+                &-left {
+                    width: 18px;
+                    height: 18px;
+                    fill: v.$color_red;
+                }
+
+                &-right {
+                    width: 18px;
+                    height: 18px;
+                    fill: v.$color_red;
+                    rotate: 180deg;
+                }
+
+                @media(max-width: v.$media_md) {
+                    width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                }
+            }
+        }
+    }
+}
