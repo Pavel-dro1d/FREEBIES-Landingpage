@@ -10,11 +10,14 @@
     padding: 180px 10px 100px 10px;
     width: 100%;
     @include m.d-flex(space-between, start, nowrap, row, 0, 0);
+
     &__contacts {
         max-width: 340px;
         @include m.d-flex(start, start, nowrap, column, 0, 20px);
+
         &-header {
             @include m.d-flex(start, center, nowrap, row, 10px, 0);
+
             &-icon {
                 width: 35px;
                 height: 37px;
@@ -37,12 +40,29 @@
             span {
                 @include m.font(16px, 700, v.$color_dark_grey);
             }
+
+            @media(max-width: v.$media_lg) {
+                @include m.font(12px, 500, v.$color_dark_grey);
+
+                span {
+                    @include m.font(12px, 700, v.$color_dark_grey);
+                }
+            }
+
+            @media(max-width: v.$media_md) {
+                @include m.font(10px, 500, v.$color_dark_grey);
+
+                span {
+                    @include m.font(10px, 700, v.$color_dark_grey);
+                }
+            }
         }
 
         &-icons {
             // max-width: 140px;
             padding: 10px 0 10px 0;
             @include m.d-flex(start, center, nowrap, row, 20px, 0);
+
             &-facebook {
                 width: 31px;
                 height: 31px;
@@ -50,6 +70,7 @@
                 background-color: v.$color_red;
                 box-shadow: 0px 0px 21px -6px rgba(66, 68, 90, 1);
                 position: relative;
+
                 &-logo {
                     width: 34px;
                     height: 35px;
@@ -69,6 +90,7 @@
                 background-color: v.$color_red;
                 box-shadow: 0px 0px 21px -6px rgba(66, 68, 90, 1);
                 position: relative;
+
                 &-logo {
                     width: 35px;
                     height: 35px;
@@ -88,6 +110,7 @@
                 background-color: v.$color_red;
                 box-shadow: 0px 0px 21px -6px rgba(66, 68, 90, 1);
                 position: relative;
+
                 &-logo {
                     width: 34px;
                     height: 35px;
@@ -99,16 +122,40 @@
                     background-color: v.$color_grey;
                 }
             }
+
+            @media(max-width: v.$media_lg) {
+                padding: 0 0 0 5px;
+            }
+
+            @media(max-width: v.$media_md) {
+                padding: 0 0 0 5px;
+            }
         }
 
         &-rights {
             @include m.font(16px, 400, #afb5c0);
+
             span {
                 @include m.font(16px, 500, #afb5c0);
             }
+
+            @media(max-width: v.$media_lg) {
+                @include m.font(12px, 400, #afb5c0);
+
+            span {
+                @include m.font(12px, 500, #afb5c0);
+            }
+            }
         }
 
+        @media(max-width: v.$media_lg) {
+            width: 225px;
+        }
 
+        @media(max-width: v.$media_md) {
+            width: 100%;
+            padding: 0 10px 0 0;
+        }
     }
 
     &__product {
@@ -128,6 +175,49 @@
 
                 &:hover {
                     @include m.font(16px, 500, v.$color_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_lg) {
+            &-title {
+                @include m.font(16px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(14px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_md) {
+            width: 100%;
+
+            &-title {
+                @include m.font(14px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(12px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_sm) {
+            width: 100%;
+
+            &-title {
+                @include m.font(12px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(10px, 400, v.$color_dark_grey);
                 }
             }
         }
@@ -153,6 +243,49 @@
                 }
             }
         }
+
+        @media(max-width: v.$media_lg) {
+            &-title {
+                @include m.font(16px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(14px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_md) {
+            width: 100%;
+
+            &-title {
+                @include m.font(14px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(12px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_sm) {
+            width: 100%;
+
+            &-title {
+                @include m.font(12px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(10px, 400, v.$color_dark_grey);
+                }
+            }
+        }
     }
 
     &__others {
@@ -165,7 +298,7 @@
 
         &-list {
             @include m.d-flex(start, start, nowrap, column, 0, 10px);
-            
+
             &-item {
                 @include m.font(16px, 400, v.$color_dark_grey);
                 line-height: 1.8;
@@ -175,5 +308,62 @@
                 }
             }
         }
+
+        @media(max-width: v.$media_lg) {
+
+            &-title {
+                @include m.font(16px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(14px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_md) {
+            width: 100%;
+
+            &-title {
+                @include m.font(14px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(12px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+
+        @media(max-width: v.$media_sm) {
+            width: 100%;
+
+            &-title {
+                @include m.font(12px, 500, v.$color_black);
+            }
+    
+            &-list {
+    
+                &-item {
+                    @include m.font(10px, 400, v.$color_dark_grey);
+                }
+            }
+        }
+    }
+
+    @media(max-width: v.$media_xl) {
+        padding: 90px 10px 100px 10px;
+    }
+
+    @media(max-width: v.$media_lg) {
+        padding: 60px 10px 100px 10px;
+        @include m.d-flex(center, start, nowrap, row, 10%, 0);
+    }
+
+    @media(max-width: v.$media_lg) {
+        @include m.d-flex(center, start, nowrap, row, 5%, 0);
     }
 }
